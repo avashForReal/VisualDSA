@@ -11,6 +11,7 @@
     "server:dev": "pnpm server:cmd dev",
     "client:dev": "pnpm client:cmd dev",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "prepare": "husky install"
   },

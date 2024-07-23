@@ -1,5 +1,5 @@
 {
-  "name": "pnpm-monorepo",
+  "name": "visualdsa",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "engines": {
     "node": ">=18.16.1"
   },

@@ -1,6 +1,9 @@
 // src/index.ts
-import express, { Express, Request, Response } from 'express';
+import express, { Express } from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
+
+import appRoutes from './routes';
 
 /*
  * Load up and parse configuration details from
@@ -17,16 +20,16 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
-/* Define a route for the root path ("/")
- using the HTTP GET method */
-app.get('/', (req: Request, res: Response) => {
-  res.send('test');
-});
+/*
+ * Enable cors for incoming requests
+ */
+app.use(cors());
+
+/* Initialize routes for the root path ("/api") */
+app.use('/api', appRoutes);
 
 /* Start the Express app and listen
  for incoming requests on the specified port */
 app.listen(port, () => {
-  console.info(
-    `[dsa-visualizer]: Server is running at http://localhost:${port}`,
-  );
+  console.info(`[dsa-visualizer]: Server is running at port: ${port}`);
 });

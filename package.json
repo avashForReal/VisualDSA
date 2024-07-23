@@ -6,8 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:dev": "pnpm --filter server dev",
-    "client:dev": "pnpm --filter client dev",
+    "server:cmd": "pnpm --filter server",
+    "client:cmd": "pnpm --filter client",
+    "server:dev": "pnpm server:cmd dev",
+    "client:dev": "pnpm client:cmd dev",
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "husky install"

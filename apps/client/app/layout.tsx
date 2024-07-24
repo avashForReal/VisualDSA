@@ -1,16 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { cn } from '@/lib/utils';
-import '@/styles/globals.css';
+import NavBar from '@/sections/NavBar';
+import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'VisualDSA',
-  description: 'Visualize Data Structures And Algorithms',
+  description: 'VisualDSA',
 };
 
 export default function RootLayout({
@@ -20,12 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          inter.variable,
-        )}
-      >
+      <body className={`${inter.className} flex flex-col justify-between`}>
+        <NavBar />
         {children}
       </body>
     </html>

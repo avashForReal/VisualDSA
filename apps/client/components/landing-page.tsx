@@ -14,7 +14,7 @@ export default function LandingPage() {
   const [activeTab, setActiveTab] = useState('sorting');
   return (
     <div className="flex flex-col min-h-screen p-6">
-      <header className="flex items-center justify-between pb-4 border-b">
+      {/* <header className="flex items-center justify-between pb-4 border-b">
         <h1 className="text-2xl font-bold">VisualDSA</h1>
         <nav className="flex gap-4">
           <a href="#" className="text-sm">
@@ -27,7 +27,7 @@ export default function LandingPage() {
             GitHub
           </a>
         </nav>
-      </header>
+      </header> */}
       <div className="flex flex-1 mt-6">
         <aside className="w-48 p-4 border-r">
           <div className="flex flex-col space-y-2">
